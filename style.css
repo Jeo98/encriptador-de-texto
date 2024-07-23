@@ -26,6 +26,7 @@ body{
     box-sizing: border-box;
     background-color: var(--color-primario);
     color: var(--color-secundario);
+    
 }
 .tituloh1{
 
@@ -56,41 +57,6 @@ text-align: center;
     justify-content: center; /** centra los objetos*/
     gap: 16px;
 }
-.Boton-encriptar{
-
-    width: 25%;
-    
-    text-align: center;
-    padding: 21.5px 0;
-    border-radius: 80px;
-    font-family: var(--fuente-Montserrat);
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-terciario);
-    border: 3px solid #31363F;
-    display: flex; /* alinea los objetos de una clase*/
-    justify-content: center; /** centra los objetos*/
-    gap: 16px;
-
-}
-.Boton_desencriptar{
-
-    width: 25%;
-    text-align: center;
-    padding: 21.5px 0;
-    border-radius: 80px;
-    font-family: var(--fuente-Montserrat);
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-terciario);
-    border: 3px solid #31363F;
-    display: flex; /* alinea los objetos de una clase*/
-    justify-content: center; /** centra los objetos*/
-    gap: 16px;
-
-}
 
 
 
@@ -103,6 +69,7 @@ text-align: center;
     background-color: var(--color-terciario);
     color: #EEEEEE;
     font-family: var(--fuente-montserrat);
+    
 }
 .presentacion__enlaces_links{
     text-decoration: none;
