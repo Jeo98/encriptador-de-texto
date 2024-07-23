@@ -33,21 +33,65 @@ padding: auto;
 font-size: 2rem;
 color: var(--color-secundario);
 font-family: var(--fuente-montserrat);
+text-align: center;
 
+}
+
+.botones{
+
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 25%;
+    
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 80px;
+    font-family: var(--fuente-Montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-terciario);
+    border: 3px solid #31363F;
+    display: flex; /* alinea los objetos de una clase*/
+    justify-content: center; /** centra los objetos*/
+    gap: 16px;
 }
 .Boton-encriptar{
 
+    width: 25%;
     
-    padding: 10px 20px;
-    margin: 0 5px;
-    border:#222831;
-    border-radius: 5px;
-    color: var(--color-secundario);
-    cursor: pointer;
-    background-color: var(--color-primario);
-    font-family: var(--fuente-krona);
-    font-size: 1rem;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 80px;
+    font-family: var(--fuente-Montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-terciario);
+    border: 3px solid #31363F;
+    display: flex; /* alinea los objetos de una clase*/
+    justify-content: center; /** centra los objetos*/
+    gap: 16px;
+
 }
+.Boton_desencriptar{
+
+    width: 25%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 80px;
+    font-family: var(--fuente-Montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-terciario);
+    border: 3px solid #31363F;
+    display: flex; /* alinea los objetos de una clase*/
+    justify-content: center; /** centra los objetos*/
+    gap: 16px;
+
+}
+
 
 
 .footer{
