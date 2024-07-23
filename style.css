@@ -45,6 +45,8 @@ font-family: var(--fuente-montserrat);
     color: var(--color-secundario);
     cursor: pointer;
     background-color: var(--color-primario);
+    font-family: var(--fuente-krona);
+    font-size: 1rem;
 }
 
 
@@ -57,4 +59,8 @@ font-family: var(--fuente-montserrat);
     background-color: var(--color-terciario);
     color: #EEEEEE;
     font-family: var(--fuente-montserrat);
+}
+.presentacion__enlaces_links{
+    text-decoration: none;
+    
 }
