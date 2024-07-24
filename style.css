@@ -38,15 +38,48 @@ text-align: center;
 
 }
 
+.boxs{
+
+    background-color: transparent;
+    padding: 2rem;
+    width: 60%;
+    height: 4rem;
+    display: flex;
+    resize: none;
+    justify-content: space-between;
+    color: var(--color-secundario);
+}
+.button_slide {
+    background-color: transparent;
+    border: 2px solid var(--color-cuarto);
+    border-radius: 1rem;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: var(--fuente-krona);
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--color-secundario);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+
+.slide_right:hover {
+    box-shadow: inset 400px 0 0 0 var(--color-secundario);
+  }
+  .slide_left:hover {
+    box-shadow: inset 0 0 0 400px var(--color-secundario);
+  }
+
 .botones{
 
     box-sizing: border-box;
     justify-content: space-between;
     width: 25%;
-    
     text-align: center;
     padding: 21.5px 0;
-    border-radius: 80px;
+    border-radius: 15px;
     font-family: var(--fuente-Montserrat);
     font-size: 1.5rem;
     font-weight: 600;
