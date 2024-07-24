@@ -49,21 +49,25 @@ text-align: center;
     justify-content: space-between;
     color: var(--color-secundario);
 }
+.buttons {
+    display: flex;
+    justify-content: space-between; /* Añadido para separar los botones */
+    margin-top: 20px; /* Añade margen superior para separar de las cajas de texto */
+    gap: 24px; /* Añade espacio entre los botones */
+    padding: 5%;
+}
 .button_slide {
     background-color: transparent;
     border: 2px solid var(--color-cuarto);
     border-radius: 1rem;
     padding: 18px 36px;
-    display: inline-block;
     font-family: var(--fuente-krona);
     font-size: 14px;
     letter-spacing: 0.1rem;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 var(--color-secundario);
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
-  }
+}
 
 .slide_right:hover {
     box-shadow: inset 400px 0 0 0 var(--color-secundario);
