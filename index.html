@@ -9,29 +9,30 @@
 <body>
     <header></header>
     <h1 class="tituloh1">¡Encripta y desencripta el texto que desees!</h1>
+
     <main class="main">
-        <section class="boxs">
-            <textarea class="input-text" placeholder="Ingresa el texto a encriptar aquí..."></textarea>
+        <div class="columna_izquierda">
+                    <section class="boxs">
+                        <textarea class="input-text" placeholder="Ingresa el texto a encriptar o desencriptar aquí..."></textarea>
+                    </section>
+                    <div class="alerta">
+                        <img class="circulo_exclamacion" src="imagenes/circulo-exclamacion.png" alt="imagen de alerta">
+                        <span>Sólo letras en minúsculas y sin acentos</span>
+                    </div>
+                    <div id="buttons" class="buttons">
+                        <button class="button_slide slide_left">Encriptar</button>
+                        <button class="button_slide slide_left">Desencriptar</button>
+                    </div>
+         </div>
+         <div class="columna_derecha">
             
-        </section>
-        <section class="salida">
+            <section class="salida">
                 <div>
-                    <textarea class="output-text" readonly placeholder="Texto desencriptado:"></textarea>
-                    <img class="imagen_salida" src="imagenes/busqueda_encriptado.png" alt="imagen de candado y codigo">
-                    <h1 class="mensaje_titulo_salida" >¡Ningún mensaje fue encontrado!</h1>
-                    <h4>ingresa el texto que desees encriptar o desencriptar</h4>
+                    <textarea class="output-text" readonly placeholder="Resultado:"></textarea>
                 </div>
                 
-        </section>   
-        <div class="alerta">
-            <img class="circulo_exclamacion" src="imagenes/circulo-exclamacion.png" alt="imagen de alerta">
-            <span>Sólo letras en minúsculas y sin acentos</span>
-        </div>
-        <div id="buttons" class="buttons">
-            
-            <button class="button_slide slide_left">Encriptar</button>
-            <button class="button_slide slide_left">Desencriptar</button>
-        </div>
+            </section>   
+         </div>
     </main>
     <footer class="footer">
         <a class="presentacion__enlaces_links" href="https://www.instagram.com/juanevaristoo"><img src="imagenes/instagram.png" alt="logo de instagram"></a> 
@@ -42,4 +43,3 @@
     </footer>
 </body>
 </html>
-    
