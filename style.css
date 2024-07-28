@@ -108,6 +108,12 @@ main {
     margin-top: 1rem; /* Ajusta este valor según lo necesario */
 }
 
+#copiarTexto {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
 .button_slide {
     flex: 1;
     padding: 1rem;
