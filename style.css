@@ -27,7 +27,8 @@ body {
 }
 
 header {
-    padding: 1rem;
+    
+    padding: 0.2rem;
 }
 
 .columna_izquierda {
@@ -121,10 +122,6 @@ main {
     color: var(--color-cuarto);
 }
 
-.imagen_salida {
-    width: 20.5rem; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 20.5rem; /* Ajusta el tamaño de la imagen según sea necesario */
-}
 
 .salida {
     position: absolute;
@@ -135,20 +132,53 @@ main {
     flex-direction: column;
     align-items: center;
     margin-right: 10%;
-    height: 50%;
-    width: 20%;
+    margin-top: 3%;
+    height: 80%; /* Ajustado para el contenido dinámico */
+    width: 25%;
+    background-color: var(--color-terciario); /* Color de fondo para la caja */
+    padding: 5rem;
+    padding-bottom: 10%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
+    z-index: 1; /* Asegúrate de que esté encima del footer si es necesario */
+}
+
+.imagen_salida {
+    width: 100%; /* Ajusta según el tamaño de la imagen */
+    height: auto;
+    margin-bottom: 1rem; /* Espacio debajo de la imagen */
+    align-self: center;
+}
+
+.mensaje_titulo_salida {
+    font-size: 1.25rem;
+    color: var(--color-secundario);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.mensaje_info {
+    font-size: 1rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .output-text {
-    height: 27.7rem; /* Ajusta este valor según lo necesario */
-    width: 120%; /* Asegúrate de que el ancho sea 100% del contenedor */
+    height: 1rem; /* Ajusta la altura según sea necesario */
+    width: 100%;
 }
 
+
 footer {
+   
     text-align: center;
     padding: 1rem;
     background-color: var(--color-terciario);
     color: var(--color-secundario);
+    z-index: 0; /* Asegura que el footer esté debajo si hay superposición */
+    
 }
 
 .presentacion__enlaces_links {
@@ -164,13 +194,28 @@ footer {
 /* Media Queries */
 
 /* Tablets */
-@media (max-width: 1024px) {
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 1124px) {
     .salida {
         position: static;
         transform: none;
-        margin: 0;
-        width: 80%;
+        margin: 2rem 1rem;
+        width: 100%;
         height: auto;
+        padding: 1rem;
+    }
+    
+    .imagen_salida {
+        display: none; /* Oculta la imagen en tablets */
+    }
+
+    .mensaje_titulo_salida,
+    .mensaje_info {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        text-align: center;
     }
 
     main {
@@ -182,12 +227,20 @@ footer {
 
     .boxs {
         margin: 0;
-        width: 80%;
+        width: 100%;
     }
 
     .buttons {
         width: 80%;
         margin: 1rem 0;
+        flex-direction: column; /* Coloca los botones en columna */
+        align-items: center; /* Centra los botones */
+    }
+
+    .button_slide {
+        width: 100%;
+        margin-bottom: 0.5rem; /* Espacio entre botones */
+        text-align: center; /* Centra el texto dentro del botón */
     }
 }
 
@@ -196,14 +249,43 @@ footer {
     .salida {
         align-items: center;
         width: 100%;
+        padding: 1rem;
+        margin: 1rem 0;
+        height: auto;
+    }
+
+    .imagen_salida {
+        display: none; /* Oculta la imagen en móviles */
+    }
+
+    .mensaje_titulo_salida,
+    .mensaje_info {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        text-align: center;
     }
 
     .boxs {
         width: 100%;
+        flex-direction: column;
+    }
+
+    .input-text {
+        width: 100%;
+        height: 100%;
     }
 
     .buttons {
+        margin-left: 0;
         width: 100%;
+        flex-direction: row;
+        align-items: center; /* Centra los botones */
+    }
+
+    .button_slide {
+        width: 100%;
+        margin-bottom: 0.5rem; /* Espacio entre botones */
+        text-align: center; /* Centra el texto dentro del botón */
     }
 
     h1.tituloh1 {
@@ -211,11 +293,7 @@ footer {
     }
 
     .output-text {
-        height: 20rem; /* Ajusta según sea necesario */
-        width: 100%;
-    }
-
-    .input-text {
+        height: 15rem; /* Ajusta según sea necesario */
         width: 100%;
     }
 }
