@@ -50,8 +50,10 @@ main {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    width: 100%;
-    max-width: 600px;
+    width: 30rem;
+    margin-right: 40rem;
+    height: 20rem;
+    
     justify-content: space-between;
 }
 
@@ -66,8 +68,9 @@ main {
 
 .input-text {
     background-color: transparent;
-    color: var(--color-secundario);
+    color: var(--color-terciario);
     width: 300%;
+    
 }
 
 .input-text::placeholder {
@@ -79,7 +82,8 @@ main {
     background-color: var(--color-secundario);
     color: var(--color-terciario);
     height: 10rem; /* Ajusta la altura según sea necesario */
-    width: 
+    ;
+    
 }
 
 .output-text::placeholder {
@@ -113,6 +117,25 @@ main {
     color: var(--color-cuarto);
 }
 
+
+.imagen_salida{
+
+    width: 20.5rem; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 20.5rem; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+.salida {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50rem ;
+    box-shadow: var(--color-cuarto) 0 0 0 0.5rem;
+    border-radius: 0.5rem;
+    flex-direction:row;
+    gap: 0.5rem;
+    font-size: 0.875rem; /* Ajusta el tamaño del texto según sea necesario */
+    color: var(--color-secundario);
+    width: 30rem;
+}
 footer {
     text-align: center;
     padding: 1rem;
