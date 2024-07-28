@@ -30,6 +30,9 @@ header {
     
     padding: 0.2rem;
 }
+.columna_derecha{
+
+    margin-bottom: 3rem; /* Ajusta según el espacio deseado */}
 
 .columna_izquierda {
     flex: 1;
@@ -136,11 +139,9 @@ main {
     height: 80%; /* Ajustado para el contenido dinámico */
     width: 25%;
     background-color: var(--color-terciario); /* Color de fondo para la caja */
-    padding: 5rem;
-    padding-bottom: 10%;
-    border-radius: 0.5rem;
+    
+    border-radius: 1.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-   
     z-index: 1; /* Asegúrate de que esté encima del footer si es necesario */
 }
 
@@ -163,16 +164,17 @@ main {
     color: var(--color-secundario);
     margin-bottom: 1rem;
     text-align: center;
+    
 }
 
 .output-text {
-    height: 1rem; /* Ajusta la altura según sea necesario */
+    /*height: 100%;  Ajusta la altura según sea necesario */
     width: 100%;
 }
 
 
 footer {
-   
+    padding-top: 3rem; /* Ajusta según el espacio deseado */ 
     text-align: center;
     padding: 1rem;
     background-color: var(--color-terciario);
@@ -231,14 +233,14 @@ footer {
     }
 
     .buttons {
-        width: 80%;
-        margin: 1rem 0;
-        flex-direction: column; /* Coloca los botones en columna */
+        width: 100%;
+        margin: 1rem;
+        flex-direction: row; /* Coloca los botones en columna */
         align-items: center; /* Centra los botones */
     }
 
     .button_slide {
-        width: 100%;
+        width: 120%;
         margin-bottom: 0.5rem; /* Espacio entre botones */
         text-align: center; /* Centra el texto dentro del botón */
     }
@@ -283,7 +285,7 @@ footer {
     }
 
     .button_slide {
-        width: 100%;
+        width: 120%;
         margin-bottom: 0.5rem; /* Espacio entre botones */
         text-align: center; /* Centra el texto dentro del botón */
     }
