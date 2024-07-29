@@ -132,24 +132,7 @@ main {
 }
 
 
-.salida {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 10%;
-    margin-top: 3%;
-    height: 80%; /* Ajustado para el contenido dinámico */
-    width: 25%;
-    background-color: var(--color-terciario); /* Color de fondo para la caja */
-    
-    border-radius: 1.5%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Asegúrate de que esté encima del footer si es necesario */
-}
+
 
 .imagen_salida {
     width: 100%; /* Ajusta según el tamaño de la imagen */
@@ -178,9 +161,28 @@ main {
     width: 100%;
 }
 
+.salida {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+    margin-top: 3%;
+    height: 80%; /* Ajustado para el contenido dinámico */
+    width: 25%;
+    background-color: var(--color-terciario); /* Color de fondo para la caja */
+    border-radius: 1.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Asegúrate de que esté encima del footer si es necesario */
+}
 
 footer {
-    padding-top: 3rem; /* Ajusta según el espacio deseado */ 
+    display: flexbox;
+    width: 100%;
+    padding-top: 30rem; /* Ajusta según el espacio deseado */ 
     text-align: center;
     padding: 1rem;
     background-color: var(--color-terciario);
