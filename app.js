@@ -50,8 +50,19 @@ function encritarTexto(texto_usuario){
         return texto_desencriptado;
     }
     
-    function CopiarTexto(){
+    document.getElementById('boton-copiarTexto').addEventListener('click', CopiarTexto);
+
+function CopiarTexto() {
+    // Selecciona el elemento que contiene el texto
+    let textoSalida = document.getElementById('texto-salida');
     
-        
-    
-    }
+    // Selecciona el texto dentro del elemento
+    textoSalida.select();
+    textoSalida.setSelectionRange(0, 99999);  // Para móviles
+
+    // Copia el texto seleccionado al portapapeles
+    document.execCommand('copy');
+
+    // Opcional: Notifica al usuario que el texto fue copiado
+    alert('Texto copiado al portapapeles');
+}
