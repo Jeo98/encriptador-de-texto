@@ -1,32 +1,37 @@
-document.getElementById('boton-encriptar').addEventListener('click', function() {
-    const inputText = document.getElementById('input-text').value;
-    const encryptedText = encriptarTexto(inputText);
-    
-    document.getElementById('mensaje-titulo-salida').innerText = 'Texto Encriptado';
-    document.getElementById('mensaje-info').innerText = encryptedText;
-    document.getElementById('boton-copiarTexto').style.display = 'block';
-});
+function encritarTexto(texto_usuario){
+let arreglo_aux = "";
+let i=0;
 
-document.getElementById('boton-copiarTexto').addEventListener('click', function() {
-    const encryptedText = document.getElementById('mensaje-info').innerText;
-    copiarTextoAlPortapapeles(encryptedText);
-});
+for( i=0; i<(texto_usuario.length); i++){
 
-function encriptarTexto(text) {
-    return text
-        .replace(/e/g, 'enter')
-        .replace(/i/g, 'imes')
-        .replace(/a/g, 'ai')
-        .replace(/o/g, 'ober')
-        .replace(/u/g, 'ufat');
+    let letra=texto_usuario[i];
+  if(letra==='a')
+    arreglo_aux +="ai";
+  else{
+    if(texto_usuario[i]==='e')
+    arreglo_aux +="enter";
+    else{
+        if(texto_usuario[i]==='i')
+            arreglo_aux +="imes";
+        else{    
+            if(texto_usuario[i]==='o')
+                arreglo_aux +="ober";
+            else
+                if(texto_usuario[i]==='u')
+                    arreglo_aux +="ufat";
+                else
+                arreglo_aux += letra; //si no es vocal, agrego la letra a arregloAux
+            }
+        }
+    }
+    //compruebo indice a indice si la letra es una vocal, si lo es, encripto, sino consulto la siguiente hasta que llegue
+        // al final del arreglo(length)        
+  i++;//incremento indice del arreglo para recorrerlo completamente
+ }//fin For
+
 }
 
-function copiarTextoAlPortapapeles(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-    alert('Texto copiado al portapapeles');
+function desencriptarTexto(texto_usuario){
+
+    
 }
