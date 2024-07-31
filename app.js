@@ -1,5 +1,18 @@
 
-function encritarTexto(texto_usuario){
+const textousuario= document.querySelector(".input-text"); //aqui guardo lo que el usuario ingresa4
+const salidafinal= document.querySelector(".salida");//Guardo el texto modificado(encriptado o desencriptado)
+document.getElementById('boton-encriptar').addEventListener('click', encriptarTexto);
+
+
+function boton_encriptar(){
+    const textoEncriptado = encriptarTexto(textousuario.value);
+    salidafinal.value = textoEncriptado;
+    salidafinal.value="";
+    salidafinal.style.backgroundImage="none";
+     
+}
+
+function encriptarTexto(texto_usuario){
     let arreglo_aux = "";
     let i=0;
     
@@ -32,7 +45,8 @@ function encritarTexto(texto_usuario){
      return arreglo_aux;
     
     }
-    
+
+    document.getElementById('boton-desencriptar').addEventListener('click', desencriptarTexto);
     function desencriptarTexto(texto_usuario){
     
         //el razonamiento es el mismo a la funcion encriptarTexto, solo que se debe encontrar la palabra clave para remplazar
@@ -50,7 +64,8 @@ function encritarTexto(texto_usuario){
         return texto_desencriptado;
     }
     
-    document.getElementById('boton-copiarTexto').addEventListener('click', CopiarTexto);
+
+document.getElementById('boton-copiarTexto').addEventListener('click', CopiarTexto);
 
 function CopiarTexto() {
     // Selecciona el elemento que contiene el texto
