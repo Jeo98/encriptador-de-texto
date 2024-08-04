@@ -1,83 +1,56 @@
-
-const textousuario= document.querySelector(".input-text"); //aqui guardo lo que el usuario ingresa4
-const salidafinal= document.querySelector(".salida");//Guardo el texto modificado(encriptado o desencriptado)
-document.getElementById('boton-encriptar').addEventListener('click', encriptarTexto);
+const textArea = document.querySelector(".text_area"); // aquí guardo lo que el usuario ingresa
+const mensaje = document.querySelector(".mensaje-final"); // Guardo el texto modificado (encriptado o desencriptado)
 
 
-function boton_encriptar(){
-    const textoEncriptado = encriptarTexto(textousuario.value);
-    salidafinal.value = textoEncriptado;
-    salidafinal.value="";
-    salidafinal.style.backgroundImage="none";
-     
+function clearTextAreas() {
+    textArea.value = "";
+    mensaje.value = "";
+    mensaje.style.backgroundImage = "url('imagenes/busqueda_encriptado.png')";
 }
 
-function encriptarTexto(texto_usuario){
-    let arreglo_aux = "";
-    let i=0;
-    
-    for( i=0; i<(texto_usuario.length); i++){
-    
-        let letra=texto_usuario[i];
-      if(letra==='a')
-        arreglo_aux +="ai";
-      else{
-        if(texto_usuario[i]==='e')
-        arreglo_aux +="enter";
-        else{
-            if(texto_usuario[i]==='i')
-                arreglo_aux +="imes";
-            else{    
-                if(texto_usuario[i]==='o')
-                    arreglo_aux +="ober";
-                else
-                    if(texto_usuario[i]==='u')
-                        arreglo_aux +="ufat";
-                    else
-                    arreglo_aux += letra; //si no es vocal, agrego la letra a arregloAux
-                }
-            }
+
+
+function boton_encriptar() {
+    const textoEncriptado = encriptarTexto(textArea.value);
+    mensaje.value = textoEncriptado;
+    mensaje.style.backgroundImage = "none";
+    console.log("textoEncriptado");
+}
+
+function encriptarTexto(texto_usuario) {
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    texto_usuario = texto_usuario.toLowerCase();
+
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (texto_usuario.includes(matrizCodigo[i][0])) {
+            texto_usuario = texto_usuario.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
-        //compruebo indice a indice si la letra es una vocal, si lo es, encripto, sino consulto la siguiente hasta que llegue
-            // al final del arreglo(length)        
-      i++;//incremento indice del arreglo para recorrerlo completamente
-     }//fin For
-     return arreglo_aux;
-    
     }
+    return texto_usuario;
+}
 
-    document.getElementById('boton-desencriptar').addEventListener('click', desencriptarTexto);
-    function desencriptarTexto(texto_usuario){
-    
-        //el razonamiento es el mismo a la funcion encriptarTexto, solo que se debe encontrar la palabra clave para remplazar
-        //por la vocal correspondiente
-    
-        let texto_desencriptado=texto_usuario;
-    
-        texto_desencriptado= texto_desencriptado.replace(/ai/g,'a');
-        texto_desencriptado=texto_desencriptado.replace(/enter/g,'e');
-        texto_desencriptado=texto_desencriptado.replace(/imes/g,'i');
-        texto_desencriptado=texto_desencriptado.replace(/ober/g,'o');
-        texto_desencriptado=texto_desencriptado.replace(/ufat/g,'u');
-        //replace buscará y remplazará todas las OCURRENCIAS( cuando encuetra remplaza)
-    
-        return texto_desencriptado;
+function boton_desencriptar() {
+    const textoDesencriptado = desencriptarTexto(textArea.value);
+    mensaje.value = textoDesencriptado;
+    mensaje.style.backgroundImage = "none";
+}
+
+function desencriptarTexto(texto_usuario) {
+    let matrizCodigo = [["enter", "e"], ["imes", "i"], ["ai", "a"], ["ober", "o"], ["ufat", "u"]];
+    texto_usuario = texto_usuario.toLowerCase();
+
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (texto_usuario.includes(matrizCodigo[i][0])) {
+            texto_usuario = texto_usuario.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+        }
     }
-    
-
-document.getElementById('boton-copiarTexto').addEventListener('click', CopiarTexto);
+    return texto_usuario;
+}
 
 function CopiarTexto() {
-    // Selecciona el elemento que contiene el texto
-    let textoSalida = document.getElementById('texto-salida');
-    
-    // Selecciona el texto dentro del elemento
+    const textoSalida = document.querySelector(".mensaje-final");
     textoSalida.select();
-    textoSalida.setSelectionRange(0, 99999);  // Para móviles
-
-    // Copia el texto seleccionado al portapapeles
-    document.execCommand('copy');
-
-    // Opcional: Notifica al usuario que el texto fue copiado
-    alert('Texto copiado al portapapeles');
+    textoSalida.setSelectionRange(0, 99999); // Para móviles
+    document.execCommand("copy");
+    alert("Texto copiado al portapapeles");
 }

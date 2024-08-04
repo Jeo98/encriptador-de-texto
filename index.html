@@ -4,45 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>ENCRIPTADOR-DE-TEXTO</title>
+    <title>JEOEncriptador</title>
 </head>
-<body>
-    <header>
-      
-    </header>
-    <h1 class="tituloh1">¡Encripta y desencripta el texto que desees!</h1>
-
-    <main id="main" class="main">
-        <div class="columna_izquierda">
-                    <section id="caja_input" class="boxs">
-                        <textarea class="input-text" placeholder="Ingresa el texto a encriptar o desencriptar aquí..."></textarea>
-                    </section>
-                    <div class="alerta">
-                        <img class="circulo_exclamacion" src="imagenes/circulo-exclamacion.png" alt="imagen de alerta">
-                        <span>Sólo letras en minúsculas y sin acentos</span>
-                    </div>
-                    <div class="buttons">
-                        <button id="boton-encriptar" onclick= "boton_encriptar()" class="button_slide">Encriptar</button>
-                        <button id="boton-desencriptar"  class="button_slide">Desencriptar</button>
-                    </div>
-         </div>
-         <section id="salida" class="salida">
-                <div>
-                    <img class="imagen_salida" src="imagenes/busqueda_encriptado.png" alt="imagen de candado y codigo">
-                    <p class="mensaje_titulo_salida">Ningún mensaje fue encontrado</p>
-                    <p class="mensaje_info">Ingresa el texto que desees encriptar o desencriptar.</p>
-                    <button clickon id="boton-copiarTexto"  class="button_slide">Copiar texto</button>
-                </div>
-                
-            </section>   
-        </main>
+<header>
+    <p class="header_texto">¡Encripta y desencripta el texto que necesites!</p>
+</header>
+<body onload="clearTextAreas()" >
+    <main>
+        <section>
+            <textarea class="text_area" id="input-text" cols="30" rows="10" placeholder="ingresa el texto aquí"></textarea>
+            <div>
+                <h6 class="informacion">Sólo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="boton_encriptar" onclick="boton_encriptar()">Encriptar</button>
+                <button class="boton_desencriptar" onclick="boton_desencriptar()">Desencriptar</button>
+                <button class="boton_copiar" onclick="CopiarTexto()">Copiar resultado</button>
+            </div>
+        </section>
+        <section>
+            <textarea class="mensaje-final" id="output-text" cols="30" rows="10" readonly></textarea>
+        </section>
+    </main>
     <footer class="footer">
-        <a class="presentacion__enlaces_links" href="https://www.instagram.com/juanevaristoo"><img src="imagenes/instagram.png" alt="logo de instagram"></a> 
-        <a class="presentacion__enlaces_links" href="https://github.com/Jeo98"><img src="imagenes/github.png" alt="logo de github"></a>
-        <a class="presentacion__enlaces_links" href="https://www.linkedin.com/in/juan-evaristo-olivares/"><img src="imagenes/linkedin.png" alt="logo de linkedin"></a>
-        <a class="presentacion__enlaces_links" href="https://x.com/98jeo"><img src="imagenes/twitter-novo.png" alt="logo de twitter(X)"></a>              
-        <p>Desarrollado por JEO98</p>
+        <p class="texto_footer">Desarrollado por JEO98</p>
+        
     </footer>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
