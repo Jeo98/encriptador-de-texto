@@ -64,11 +64,11 @@ main{
     border: none;
     border-radius: 1rem;
     color: var(--color-secundario);
-    margin: 0 auto 5%; /* Centra el elemento y añade margen inferior */
+    margin: 0 auto 5%; 
     margin-left: 40%;
     
     height: 57%;
-    width: 90%; /* Ajusta el ancho para que quede bien en pantallas pequeñas */
+    width: 90%; 
     padding: 1rem;
     padding-bottom: 30%;
     align-items: center;
@@ -159,11 +159,10 @@ footer {
 
 .enlaces_links img {
 
-    display: block; /* Elimina los espacios en blanco alrededor de la imagen */
-    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; 
+    max-width: 100%; 
+    height: auto; 
 }
-
 
 
 /*-------------------------------------------------------------RESPONSIVIDAD*/
@@ -183,15 +182,13 @@ footer {
         margin-left: 0;
         margin-left: 19%;
     }
-    .mensaje-final{
+    .mensaje-final {
 
-        background-image: none;
-        margin: 2rem ; /* Centra la caja con margen superior e inferior */
-        margin-left: 14%;
+        background-size: 100% auto;
+        margin: 2rem auto;
         width: 60%;
         height: 8rem;
         margin-bottom: 10%;
-        
     }
 
     .informacion{
@@ -232,13 +229,13 @@ footer {
         width: 90%;
         margin-left: 4%;
     }
-    .mensaje-final{
-
-        background-image: none;
-        margin-left: 3rem;
-        width: 60%;
-        height: 10%;
-        margin-bottom: 10%; 
+   .mensaje-final {
+    
+        background-size: 100% auto;
+        margin: 1rem auto; 
+        width: 80%; 
+        height: 10rem; 
+        margin-bottom: 10%;
     }
     .botones {
         flex-direction: column;
