@@ -166,13 +166,9 @@ footer {
 
 
 
-/*RESPONSIVIDAD*/
-@media (max-width: 1312px) {
+/*-------------------------------------------------------------RESPONSIVIDAD*/
 
 
-}
-
-/* Estilos para tablets */
 /* Estilos para tablets */
 @media (max-width: 768px) {
     main {
@@ -216,7 +212,7 @@ footer {
     
 }
 
-/* Estilos para móviles */
+/* Estilos para celulares */
 @media (max-width: 480px) {
 
     main {
@@ -237,11 +233,11 @@ footer {
         margin-left: 4%;
     }
     .mensaje-final{
+
         background-image: none;
-        margin: 2rem ; /* Centra la caja con margen superior e inferior */
         margin-left: 3rem;
         width: 60%;
-        height: 52rem;
+        height: 10%;
         margin-bottom: 10%; 
     }
     .botones {
@@ -263,10 +259,5 @@ footer {
         width: 100%;
     }
 
-    .mensaje-final {
-        background-image: none;
-        height: 50%;
-        margin: 2rem 0; /* Centra la caja con margen superior e inferior */
-        margin-bottom: 10%;
-    }
+    
 }
