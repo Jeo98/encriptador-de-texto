@@ -216,7 +216,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 1rem;
+        
     }
 
     .header_texto {
@@ -227,21 +227,32 @@ footer {
 
     .text_area {
         width: 90%;
-        margin-left: 4%;
+        height: 50%;
+        margin-left: 3%;
+        
+    }
+    .informacion{
+        margin-top: 1%;
+        text-align: center;
+        margin: auto;
+        margin-right: 2rem;
     }
    .mensaje-final {
     
         background-size: 100% auto;
-        margin: 1rem auto; 
-        width: 80%; 
+        margin: 1rem ; 
+        width: 78%; 
         height: 10rem; 
         margin-bottom: 10%;
     }
     .botones {
         flex-direction: column;
+        margin-left: 6.5%;
         gap: 1rem;
-        width: 90%;
+        width: 80%;
         align-items: center;
+
+        
     }
 
     .boton_encriptar, .boton_desencriptar, .boton_copiar {
