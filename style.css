@@ -178,15 +178,16 @@ footer {
     }
 
     .text_area {
-        width: 60%;
-        margin-left: 0;
-        margin-left: 19%;
+        width: 100%;
+        
+       
     }
     .mensaje-final {
 
         background-size: 100% auto;
-        margin: 2rem auto;
-        width: 60%;
+        margin: 2rem ;
+        margin-left: 9%;
+        width: 70%;
         height: 8rem;
         margin-bottom: 10%;
     }
