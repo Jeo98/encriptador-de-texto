@@ -241,10 +241,10 @@ footer {
    .mensaje-final {
     
         background-size: 100% auto;
-        margin: 1rem ; 
         width: 78%; 
         height: 10rem; 
         margin-bottom: 10%;
+       
     }
     .botones {
         flex-direction: column;
