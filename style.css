@@ -233,17 +233,20 @@ footer {
         
     }
     .informacion{
-        margin-top: 1%;
+        margin-top: 1% ;
         text-align: center;
         margin: auto;
-        margin-right: 2rem;
+        
     }
    .mensaje-final {
-    
+        
         background-size: 100% auto;
-        width: 78%; 
+        width: 65%;
         height: 10rem; 
-        margin-bottom: 10%;
+        margin-top: 0;
+        margin-bottom: 18%;
+        margin-right: 10rem !important;
+        
        
     }
     .botones {
